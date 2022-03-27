@@ -85,4 +85,13 @@
           resource_tags:
             Name: vprofile-privsub3
        register: privsub3_out    
+     - name: Internet gateway setup
+       ec2_vpc_igw:
+         vpc_id: "{{ vpcout.vpc.id }}"
+         region: "{{ region }}"
+         state: "{{ state }}"
+         resource_tags:
+            Name: vprofile-IGW
+       register: igw_out 
+
 
