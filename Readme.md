@@ -1,1 +1,1 @@
-This is an ansible project
+This is an ansible project. We are using ansible to create VPC resources
