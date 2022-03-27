@@ -1,0 +1,3 @@
+batston_ami: ami-064ff912f78e3e561
+region: us-east-2
+MYIP: 0.0.0.0/0
