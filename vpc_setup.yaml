@@ -144,7 +144,6 @@
          - NATGW_out.nat_gateway_id
          - privRT_out.route_table.id
 
-         test
 
          
  
