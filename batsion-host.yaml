@@ -5,7 +5,7 @@
   gather_facts: no
   tasks:
      - name: Import VPC setup Variable
-       include_vars: vars/bastion_setup
+       include_vars: vars/batsion_setup
      - name: Import VPC setup Variables
        include_vars: vars/output_vars
 
@@ -54,7 +54,7 @@
            Owner: DevOps Team 
          vpc_subnet_id: "{{ pubsub1id }}"
          group_id: "{{ BastionSG_out.group_id }}"
-        register: bastionHost_out   
+       register: bastionHost_out   
 
        
       
