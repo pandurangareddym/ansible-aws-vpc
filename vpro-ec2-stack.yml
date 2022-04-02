@@ -67,7 +67,7 @@
           - proto: all
             group_id: "{{vproStackSG_out.group_id}}"
     - name: Creating Nginx web01
-      ec2:
+      ec2_instance:
         key_name: vprokey2
         region: "{{ region }}"
         instance_type: t2.micro
@@ -83,7 +83,7 @@
         vpc_subnet_id: "{{ privsub1id }}"
       register: web01_out 
     - name: Creating tomcat app01
-      ec2:
+      ec2_instance:
         key_name: vprokey2
         region: "{{ region }}"
         instance_type: t2.micro
@@ -99,7 +99,7 @@
         vpc_subnet_id: "{{ privsub1id }}"
       register: app01_out   
     - name: Creating memcache mem01
-      ec2:
+      ec2_instance:
         key_name: vprokey2
         region: "{{ region }}"
         instance_type: t2.micro
@@ -115,7 +115,7 @@
         vpc_subnet_id: "{{ privsub1id }}"
       register: mem01_out   
     - name: Creating rabbitmq rmq01
-      ec2:
+      ec2_instance:
         key_name: vprokey2
         region: "{{ region }}"
         instance_type: t2.micro
@@ -131,7 +131,7 @@
         vpc_subnet_id: "{{ privsub1id }}"
       register: rmq01_out 
     - name: Creating mysql db01
-      ec2:
+      ec2_instance:
         key_name: vprokey2
         region: "{{ region }}"
         instance_type: t2.micro
