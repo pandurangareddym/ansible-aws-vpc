@@ -11,13 +11,13 @@
     
     - name: create vprofile ec2 key
       ec2_key:
-        name: vprokey
+        name: vprokey1
         region: "{{ region }}"
-      register: vprokey_out  
+      register: vprokey1_out  
 
     - name: save prive key into file loginkey_vpro.pem
       copy:
         content: "{{ vprokey_out.key.private_key }}" 
         dest: "./loginkey_vpro.pem" 
         mode: 0600
-      when: vprokey_out.changed
+      when: vprokey1_out.changed
