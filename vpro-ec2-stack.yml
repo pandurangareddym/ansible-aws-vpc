@@ -8,11 +8,7 @@
       include_vars: vars/output_vars
     - name: Import vprofie setup Variable
       include_vars: vars/vprostacksetup
-<<<<<<< HEAD
-    - name: vpc_setup
-=======
     - name: import vprofile varsiables
->>>>>>> 72d15941cf221d0bd77c3cef076d6e80b518c371
       include_vars: vars/vpc_setup  
     
     - name: create vprofile ec2 key
