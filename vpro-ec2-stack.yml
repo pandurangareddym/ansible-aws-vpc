@@ -36,7 +36,7 @@
     - name: create Security group for Load balancer
       ec2_group: 
         name: vproStack-sg
-        description: allow port 22 from everywhere and all port within sg
+        description: "allow port 22 from everywhere and all port within sg"
         region: "{{ region }}"
         vpc_id: "{{ vpcid }}"
         purge_rules: no
@@ -54,7 +54,7 @@
     - name: Update security group with its own sg id
       ec2_group: 
         name: vproStack-sg
-        description: allow port 22 from everywhere and all port within sg
+        description: "allow port 22 from everywhere and all port within sg"
         region: "{{ region }}"
         vpc_id: "{{ vpcid }}"
         purge_rules: no
