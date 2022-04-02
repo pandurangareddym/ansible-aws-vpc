@@ -40,7 +40,7 @@
         region: "{{ region }}"
         vpc_id: "{{ vpcid }}"
         purge_rules: no
-        rule:
+        rules:
           - proto: tcp
             from_port: 80
             to_port: 80
@@ -58,7 +58,7 @@
         region: "{{ region }}"
         vpc_id: "{{ vpcid }}"
         purge_rules: no
-        rule:
+        rules:
           - proto: all
             group_id: "{{ vproStackSG_out.group_id }}"
        
