@@ -8,6 +8,8 @@
       include_vars: vars/output_vars
     - name: Import vprofie setup Variable
       include_vars: vars/vprostacksetup
+    - name: import vprofile varsiables
+      include_vars: vars/vpc_setup  
     
     - name: create vprofile ec2 key
       ec2_key:
@@ -45,12 +47,13 @@
             from_port: 80
             to_port: 80
             group_id: "{{ vproELBSG_out }}"
-            
+
           - proto: tcp
             from_port: 22
             to_port: 22
             group_id: "{{ BastionSGid }}"
-      register: vproStackSG_out     
+      register: vproStackSG_out   
+      ignore_erros: yes  
       
     - name: Update security group with its own sg id
       ec2_group: 
@@ -62,4 +65,5 @@
         rules:
           - proto: all
             group_id: "{{ vproStackSG_out.group_id }}"
+      ignore_errors: yes      
        
