@@ -71,7 +71,7 @@
         key_name: vprokey2
         region: "{{ region }}"
         instance_type: t2.micro
-        image: "{{ nginx_ami }}"
+        image: ami-0fb653ca2d3203ac1
         wait: yes
         wait_timeout: 300
         instance_tags:
